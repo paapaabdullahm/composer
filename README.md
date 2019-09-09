@@ -1,12 +1,12 @@
 # Composer
 Dockerized PHP dependency manager. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you.
 
-* #### Current Tags:
+* ## Current Tags:
 
-  - PHP: **`v7.3.9`**
-  - Composer: **`v1.9.0`**
+- PHP: **`v7.3.9`**
+- Composer: **`v1.9.0`**
 
-* #### Add shortcut functions via .bashrc or .zshrc
+* ## Add shortcut functions via .bashrc or .zshrc
 
 ```bash
 composer() { 
@@ -21,18 +21,20 @@ composer() {
 
 * #### Source file to apply changes
 
-    ```bash
-    $ source ~/.bashrc
-    ```
+```bash
+$ source ~/.bashrc
+```
 &nbsp;
 
-* #### Or just export it with a wrapper script as a global binary
+* ## Or just export it with a wrapper script as a global binary
 ```bash
 $ mkdir -p scripts && cd scripts
 $ vim composer.sh
 ```
+&nbsp;
 
-Add the following content into `composer.sh` file
+* Add the following content into `composer.sh` file
+
 ```bash
 #!/bin/sh
 
@@ -47,21 +49,25 @@ exec docker run -it --rm \
     --user $(id -u):$(id -g) \
     "pam79/composer:$VERSION" "$@"
 ```
+&nbsp;
 
-Install the script
+* Install the script
 ```bash
 $ sudo install -m 0755 composer.sh /usr/local/bin/composer
 ```
+&nbsp;
 
-Verify if the script was installed
+* Verify if the script was installed
 ```bash
 $ whereis composer
 ```
+&nbsp;
 
-* The shortcut function or binary can be used as follows:
+## The shortcut function or binary can be used as follows:
 ```bash
 $ composer --version
 $ composer install --no-dev
 ```
+&nbsp;
 
-Checkout Composer's [**official site**](https://getcomposer.org/) for more details.
+* Checkout Composer's [**official site**](https://getcomposer.org/) for more details.
