@@ -1,6 +1,11 @@
 FROM pam79/php-fpm
 LABEL maintainer="Abdullah Morgan <paapaabdullahm@gmail.com>"
 
+# Add Tini
+ENV TINI_VERSION v0.18.0
+ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
+RUN chmod +x /tini
+
 # Add Composer
 RUN apt update; apt install -y curl git openssh-server openssl bash; \
     php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"; \
@@ -14,5 +19,5 @@ COPY docker-entrypoint.sh /docker-entrypoint.sh
 WORKDIR /src
 VOLUME /src
 
-ENTRYPOINT ["/bin/bash", "/docker-entrypoint.sh"]
+ENTRYPOINT ["/bin/sh", "/docker-entrypoint.sh"]
 CMD ["composer"]
