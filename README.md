@@ -4,7 +4,7 @@ Dockerized PHP dependency manager. It allows you to declare the libraries your p
 * #### Current Tags:
 
   - PHP: **`v7.3.9`**
-  - Composer: **`v1.8.5`**
+  - Composer: **`v1.9.0`**
 
 * #### Add shortcut functions via .bashrc or .zshrc
 
