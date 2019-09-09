@@ -1,12 +1,12 @@
 # Composer
 Dockerized PHP dependency manager. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you.
 
-* ## Current Tags:
+## Current Tags:
 
 - PHP: **`v7.3.9`**
 - Composer: **`v1.9.0`**
 
-* ## Add shortcut functions via .bashrc or .zshrc
+## Add shortcut functions via .bashrc or .zshrc
 
 ```bash
 composer() { 
@@ -19,14 +19,14 @@ composer() {
 ```
 &nbsp;
 
-* #### Source file to apply changes
+* Source file to apply changes
 
 ```bash
 $ source ~/.bashrc
 ```
 &nbsp;
 
-* ## Or just export it with a wrapper script as a global binary
+## Or just export it with a wrapper script as a global binary
 ```bash
 $ mkdir -p scripts && cd scripts
 $ vim composer.sh
