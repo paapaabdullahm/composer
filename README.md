@@ -1,20 +1,20 @@
-# Composer
+# COMPOSER
 Dockerized PHP dependency manager. It allows you to declare the libraries your project depends on and it will manage (install/update) them for you.
 
 ## Current Tags:
 
-- PHP: **`v7.3.9`**
-- Composer: **`v1.9.0`**
+* PHP: **`v7.3.9`**
+* Composer: **`v1.9.0`**
 
 ## Add shortcut functions via .bashrc or .zshrc
 
 ```bash
-composer() { 
+composer() {
     docker run --rm -it \
     --workdir /src \
     --volume "$(pwd)":/src \
     --user $(id -u):$(id -g) \
-    pam79/composer "$@"; 
+    pam79/composer "$@";
 }
 ```
 &nbsp;
@@ -51,14 +51,9 @@ exec docker run -it --rm \
 ```
 &nbsp;
 
-* Install the script
+* Install and verify if the script was installed
 ```bash
 $ sudo install -m 0755 composer.sh /usr/local/bin/composer
-```
-&nbsp;
-
-* Verify if the script was installed
-```bash
 $ whereis composer
 ```
 &nbsp;
