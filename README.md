@@ -19,7 +19,7 @@ composer() {
 ```
 &nbsp;
 
-* Source file to apply changes
+Source file to apply changes
 
 ```bash
 $ source ~/.bashrc
@@ -33,7 +33,7 @@ $ vim composer.sh
 ```
 &nbsp;
 
-* Add the following content into `composer.sh` file
+Add the following content into `composer.sh` file
 
 ```bash
 #!/bin/sh
@@ -51,7 +51,8 @@ exec docker run -it --rm \
 ```
 &nbsp;
 
-* Install and verify if the script was installed
+Install and verify if the script was installed
+
 ```bash
 $ sudo install -m 0755 composer.sh /usr/local/bin/composer
 $ whereis composer
@@ -65,4 +66,5 @@ $ composer install --no-dev
 ```
 &nbsp;
 
-* Checkout Composer's [**official site**](https://getcomposer.org/) for more details.
+Checkout Composer's [**official site**](https://getcomposer.org/) for more details.
+
