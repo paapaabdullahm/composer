@@ -4,6 +4,7 @@ isCommand() {
   for cmd in \
     "about" \
     "archive" \
+    "auto-scripts" \
     "browse" \
     "check-platform-reqs" \
     "clear-cache" \
@@ -13,11 +14,14 @@ isCommand() {
     "depends" \
     "diagnose" \
     "dump-autoload" \
+    "dump-env" \
     "dumpautoload" \
     "exec" \
+    "fix-recipes" \
     "global" \
     "help" \
     "home" \
+    "i" \
     "info" \
     "init" \
     "install" \
@@ -27,6 +31,7 @@ isCommand() {
     "prohibits" \
     "remove" \
     "require" \
+    "run" \
     "run-script" \
     "search" \
     "self-update" \
@@ -34,11 +39,18 @@ isCommand() {
     "show" \
     "status" \
     "suggests" \
+    "sync-recipes" \
+    "u" \
+    "unpack" \
     "update" \
     "upgrade" \
     "validate" \
     "why" \
-    "why-not"
+    "why-not" \
+    "symfony:dump-env" \
+    "symfony:generate-id" \
+    "symfony:sync-recipes" \
+    "symfony:unpack"
   do
     if [ -z "${cmd#"$1"}" ]; then
       return 0
