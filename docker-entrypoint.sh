@@ -9,6 +9,7 @@ isCommand() {
     "check-platform-reqs" \
     "clear-cache" \
     "clearcache" \
+    "cc" \
     "config" \
     "create-project" \
     "depends" \
