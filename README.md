@@ -3,8 +3,8 @@ Dockerized PHP dependency manager. It allows you to declare the libraries your p
 
 ## Current Tags:
 
-* PHP: **`v7.3.9`**
-* Composer: **`v1.9.0`**
+* PHP: **`v7.4.1`**
+* Composer: **`v1.9.1`**
 
 ## Add shortcut functions via .bashrc or .zshrc
 
@@ -17,21 +17,18 @@ composer() {
     pam79/composer "$@";
 }
 ```
-&nbsp;
 
 Source file to apply changes
 
 ```bash
 $ source ~/.bashrc
 ```
-&nbsp;
 
 ## Or just export it with a wrapper script as a global binary
 ```bash
 $ mkdir -p scripts && cd scripts
 $ vim composer.sh
 ```
-&nbsp;
 
 Add the following content into `composer.sh` file
 
@@ -49,7 +46,6 @@ exec docker run -it --rm \
     --user $(id -u):$(id -g) \
     "pam79/composer:$VERSION" "$@"
 ```
-&nbsp;
 
 Install and verify if the script was installed
 
@@ -57,14 +53,12 @@ Install and verify if the script was installed
 $ sudo install -m 0755 composer.sh /usr/local/bin/composer
 $ whereis composer
 ```
-&nbsp;
 
 ## The shortcut function or binary can be used as follows:
 ```bash
 $ composer --version
 $ composer install --no-dev
 ```
-&nbsp;
 
 Checkout Composer's [**official site**](https://getcomposer.org/) for more details.
 
