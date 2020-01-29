@@ -7,7 +7,7 @@ ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
 RUN chmod +x /tini
 
 # Add Composer
-RUN apt update && apt install -y curl git openssh-server openssl bash; \
+RUN apt update && apt install -y bash curl git openssh-server openssl unzip; \
     #
     # Download the installer to the current directory
     php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"; \
